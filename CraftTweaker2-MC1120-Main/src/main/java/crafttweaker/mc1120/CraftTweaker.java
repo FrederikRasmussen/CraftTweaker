@@ -153,14 +153,6 @@ public class CraftTweaker {
     @EventHandler
     @SideOnly(Side.CLIENT)
     public void onFMLLoadComplete(FMLLoadCompleteEvent event) {
-        
-        final Minecraft minecraft = Minecraft.getMinecraft();
-        if(!alreadyChangedThePlayer) {
-            alreadyChangedThePlayer = true;
-            minecraft.populateSearchTreeManager();
-            ((SearchTree) minecraft.getSearchTreeManager().get(SearchTreeManager.ITEMS)).recalculate();
-            CraftTweakerAPI.logInfo("Fixed the RecipeBook");
-        }
     }
     
     @EventHandler
